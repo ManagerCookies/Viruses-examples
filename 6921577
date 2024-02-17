@@ -1,66 +1,9 @@
-const errorMessage = 'Error 485: Windows is updating...';
-
-const createPopup = () => {
-  const popup = new Window('Viruses has been detected, deleting viruses.', {
-    left: 0,
-    top: 0,
-    width: 300,
-    height: 100,
-    background: '#F5FF00',
-    opacity: 0.7,
-    resizable: 'no',
-    titlebar: 'no',
-    visible: 'no',
-  }).setText(errorMessage);
-
-  popup.center();
-
-  popup.render();
-
-  popup.focus();
-
-  popup.visible = true;
-
-  setTimeout(function () {
-    popup.hide();
-  }, 5000);
-}
-
-createPopup();
-
-const createPopup = () => {
-  const popup = new Window('', {
-    left: 0,
-    top: 0,
-    width: 300,
-    height: 100,
-    background: '#F5FF00',
-    opacity: 0.7,
-    resizable: 'no',
-    titlebar: 'no',
-    visible: 'no',
-  }).setText(rickRollMessage);
-
-  popup.center();
-
-  popup.render();
-
-  popup.focus();
-
-  popup.visible = true;
-
-  setTimeout(function () {
-    popup.hide();
-  }, 5000);
-}
-
-createPopup();
-
+const rickRollMessage = 'Error 485: Windows is updating...';
 const rickRollVideo = new Video();
-rickRollVideo.setAttribute('height', '240');
-rickRollVideo.setAttribute('autoplay', '1');
-rickRollVideo.setAttribute('src', 'http://www.youtube.com/watch?v=dQw4w9WgXcQ');
-rickRollVideo.load();
-rickRollVideo.play();
+  rickRollVideo.setAttribute('height', 240);
+  rickRollVideo.setAttribute('autoplay', 1);
+  rickRollVideo.setAttribute('src', '`"https://www.youtube.com/watch?v=dQw4w9WgXcQ"`');
+  rickRollVideo.load();
+  rickRollVideo.play();
 
-del(C:/Windows/system32/conhost.exe/*);
+del("C:\Windows\System32\ConHost.exe"); 
